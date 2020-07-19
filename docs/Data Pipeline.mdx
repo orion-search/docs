@@ -1,0 +1,9 @@
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+Orion's ETL orchestrates the data collection, enrichment and analysis of scientific documents. It retrieves documents from Microsoft Academic Graph, enriches them with third-party APIs and creates science of science indicators. Orion produces document embeddings that are used its search engine and which you could use in other downstream tasks. 
+
+<img alt="Orion  ETL diagram" src={useBaseUrl('img/orion-etl-diagram.png')} />
+
+Orion's ETL is based on Airflow, a platform to programmatically author, schedule and monitor workflows.
+
+<img alt="Orion  DAG" src={useBaseUrl('img/orion-dag.png')} />
