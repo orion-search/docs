@@ -2,7 +2,7 @@ module.exports = {
   title: 'Orion',
   tagline: 'Knowledge discovery and research measurement',
   url: 'https://orion-search.github.io',
-  baseUrl: '/docs/',
+  baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'orion-search', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
