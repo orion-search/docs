@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'orion-search', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  projectName: '/docs/', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Orion',
@@ -17,7 +17,7 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Documentation',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
@@ -32,11 +32,11 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
               label: 'Introduction',
-              to: 'docs/introduction',
+              to: 'docs/',
             },
             {
               label: 'Tutorials',
