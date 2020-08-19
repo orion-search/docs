@@ -94,7 +94,7 @@ module.exports = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/orion-search/docs/edit/master/blog/',
+            'https://github.com/orion-search/docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
