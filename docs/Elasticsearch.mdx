@@ -1,0 +1,6 @@
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+We use **Elasticsearch** for keyword-based searches. We index academic publications to Elasticsearch with [Postgreqsl2ElasticSearchOperator](https://docs.orion-search.org/docs/Operators#postgreqsl2elasticsearchoperator). 
+
+For each new query, Elasticsearch performs a full-text search over the _publication title_, _abstract_ and _fields of study_ and returns exact or similar matches.
+

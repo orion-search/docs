@@ -1,0 +1,9 @@
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+For long-text queries, Orion finds semantically similar publications by making vector-based comparisons at scale. Here is how it works:
+
+- [Infer a document vector](https://docs.orion-search.org/docs/Operators#text2sentencebertoperator) for every paper abstract in the database using a sentence-level DistilBERT model.
+- [Build a Faiss index](https://docs.orion-search.org/docs/Operators#faissindexoperator) with the document vectors.
+- For every new, long-text query:
+  - Infer its vector representation with the same sentence-level DistilBERT model.
+  - Use the pre-built Faiss index for similarity matching and return the most relevant results.

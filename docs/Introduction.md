@@ -6,7 +6,7 @@ Orion has three distinct components:
 - A [web-interface](https://github.com/orion-search/orion-search.org) with interactive data visualisations.
 - A [search engine](https://github.com/orion-search/search-engine) for keyword and vector-based searches.
 
-You can combine these components to develop an application (see Use Cases) or use Orion's data pipeline for science of science projects.
+You can combine these components to develop an application (see [Use Cases](https://docs.orion-search.org/docs/Use%20Cases)) or use Orion's data pipeline for science of science projects.
 
 You can find Orion on [GitHub](https://github.com/orion-search).
 
