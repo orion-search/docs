@@ -69,12 +69,19 @@ Creates the following tables that are used in the front-end:
 **Source**: PostgreSQL  
 **Target**: PostgreSQL
 
+## `DimReductionFittedUmapOperator` ##
+
+Transforms high dimensional arrays to 3D using a pre-fitted UMAP. The output table is used in the front-end. You can filter documents by their character length or exclude them using their MAG ID. You can also tune UMAP's hyperparameters. This configuration is done in the `model_config.yaml`
+
+**Source**: PostgreSQL, S3  
+**Target**: PostgreSQL
+
 ## `DimReductionOperator` ##
 
-Transforms high dimensional arrays to 3D using UMAP. The output table is used in the front-end. You can filter documents by their character length or exclude them using their MAG ID. You can also tune UMAP's hyperparameters. This configuration is done in the `model_config.yaml`.
+Transforms high dimensional arrays to 3D with UMAP. The output table is used in the front-end. You can filter documents by their character length or exclude them using their MAG ID. You can also tune UMAP's hyperparameters. This configuration is done in the `model_config.yaml`
 
 **Source**: PostgreSQL  
-**Target**: PostgreSQL
+**Target**: PostgreSQL, S3  
 
 ## `CountryCollaborationOperator` ##
 
@@ -233,6 +240,10 @@ Creates Orion's S3 buckets. The Airflow task is named after the S3 bucket it cre
 ## `PythonOperator("create_tables")` ##
 
 Creates Orion's PostgreSQL tables and instantiates a database if it does not exist.
+
+## `PythonBranchOperator("umap_exists")` ##
+
+Checks if a fitted UMAP model exists in an S3 bucket. If it finds a model, it will use it to reduce the dimensionality of new document vectors. Otherwise, it will delete all 3D vectors from the `DocVectors` table and fit a new model.
 
 ## `DummyOperators` ##
 
